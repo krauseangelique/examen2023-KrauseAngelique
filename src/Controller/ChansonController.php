@@ -15,4 +15,15 @@ class ChansonController extends AbstractController
             'controller_name' => 'ChansonController',
         ]);
     }
+
+    #[Route('/', name: 'app_liste_chansons')]
+    public function liste(): Response
+    {
+        // Aller rechercher la liste des chansons en DB findAll()
+
+
+        return $this->render('chanson/index.html.twig', [
+            'controller_name' => 'ChansonController',
+        ]);
+    }
 }
