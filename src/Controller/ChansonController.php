@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Chanson;
+use App\Entity\Genre;
 use App\Form\ChansonType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -36,7 +37,7 @@ class ChansonController extends AbstractController
     public function new(Request $request): Response
     {
         $genre = new Genre();
-        $genre->setGenre('pop');
+        $genre->setNom('pop');
         $genre->setDescription('annee 70 le top');
 
         $chanson = new Chanson();
